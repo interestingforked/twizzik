@@ -3,7 +3,8 @@ twizzik
 
 Current supported functions include:
 
-#### twizzik.py
+**twizzik.py**  
+ ==========
 
 `send_tweet()` - sends tweets from the command line  
 
