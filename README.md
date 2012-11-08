@@ -20,12 +20,12 @@ _Current supported functions include:_
 _Upcoming functions include:_  
 
 `add_whitelist_user()` -  
-`rem_whitelist_user()` -  
+`del_whitelist_user()` -  
 `get_whitelist()` -  
 `add_blacklist_user()` -  
-`rem_blacklist_user()` -  
+`del_blacklist_user()` -  
 `get_blacklist()` -  
 `add_track_user()` -  
-`rem_track_user()` -  
+`del_track_user()` -  
 `get_tracked_users()` -  
 
