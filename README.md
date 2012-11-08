@@ -1,7 +1,7 @@
 twizzik
 =======
 
-Current supported functions include:
+_Current supported functions include:_
 
 **twizzik.py**  
  ========
@@ -16,3 +16,7 @@ Current supported functions include:
 
 **twizzik_db.py**  
  ===========  
+
+_Upcoming functions include:_  
+
+
