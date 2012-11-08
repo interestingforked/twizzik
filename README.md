@@ -19,9 +19,9 @@ _Current supported functions include:_
 
 _Upcoming functions include:_  
 
-`add_whitelist_user()` -  
+`add_whitelist_user()` -  This will create a whitelist of users (for the authenticated user) that will not be unfollowed with the `mass_unfollow()` function.  
 
-`del_whitelist_user()` -  
+`del_whitelist_user()` -  This will remove a user from the whitelist of the Authenticated user.
 
 `get_whitelist()` -  
 
