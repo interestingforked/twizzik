@@ -19,4 +19,9 @@ _Current supported functions include:_
 
 _Upcoming functions include:_  
 
-
+`add_whitelist_user()` -  
+`add_blacklist_user()` -  
+`del_whitelist_user()` -  
+`del_blacklist_user()` -  
+`add_track_user()` -  
+`del_track_user()` -  
