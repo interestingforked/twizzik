@@ -3,6 +3,8 @@ twizzik
 
 Current supported functions include:
 
+#### twizzik.py
+
 `send_tweet()` - sends tweets from the command line  
 
 `keyword_follow()` - allows for searching the _twittersphere_ and following other users based on those tweets  
