@@ -1,5 +1,6 @@
 twizzik
 =======
+##Functions
 
 _Current supported functions include:_
 
