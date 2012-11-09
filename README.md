@@ -11,7 +11,7 @@ _Current supported functions include:_
 
 `keyword_follow()` - allows for searching the _twittersphere_ and following other users based on those tweets  
 
-`keyword_retweet()` - same as `keyword_follow()` but adds the ability to retweet.  
+`keyword_retweet()` - same as `keyword_follow()` but adds the ability to retweet  
 
 `mass_unfollow()` - checks the authenticated user's followers and following and automatically unfollows non-reciprocal users  
 
@@ -20,23 +20,23 @@ _Current supported functions include:_
 
 _Upcoming functions include:_  
 
-`add_whitelist_user()` -  This will create a whitelist of users that will not be unfollowed with the `mass_unfollow()` function.  
+`add_whitelist_user()` - This will add a user to a whitelist of users that will not be unfollowed with the `mass_unfollow()` function  
 
-`del_whitelist_user()` -  This will remove a user from the whitelist of the Authenticated user.
+`del_whitelist_user()` - This will remove a user from the whitelist of the Authenticated user
 
-`get_whitelist()` -  
+`get_whitelist()` - This will fetch all of the users from the `twizzik.White_List` table  
 
-`add_blacklist_user()` -  
+`add_blacklist_user()` - This will add a user to a blacklist of members who won't show up in any search results
 
-`del_blacklist_user()` -  
+`del_blacklist_user()` - This will remove a user from the blacklist of the Authenticated user  
 
-`get_blacklist()` -  
+`get_blacklist()` - This will fetch all of the users from the `twizzik.Black_List` table  
 
-`add_track_user()` -  
+`add_track_user()` - This will add a user to the list of members to be tracked (future)  
 
-`del_track_user()` -  
+`del_track_user()` - This will remove a user to the list of members to be tracked (future)  
 
-`get_tracked_users()` -  
+`get_tracked_users()` - This will fetch all of the users from the `twizzik.User_Tracking` table  
 
 ##Databases
 ```
