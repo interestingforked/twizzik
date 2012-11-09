@@ -37,3 +37,82 @@ _Upcoming functions include:_
 
 `get_tracked_users()` -  
 
+##Databases
+```
+/* This is the Users Table */
+mysql> SHOW COLUMNS FROM `twizzik`.`Users`;
++-----------------------+--------------+------+-----+---------+-------+
+| Field                 | Type         | Null | Key | Default | Extra |
++-----------------------+--------------+------+-----+---------+-------+
+| created_at            | varchar(255) | NO   |     | NULL    |       |
+| default_profile_image | tinyint(1)   | NO   |     | 0       |       |
+| description           | varchar(255) | YES  |     | NULL    |       |
+| favourites_count      | int(11)      | NO   |     | 0       |       |
+| followers_count       | int(11)      | NO   |     | 0       |       |
+| friends_count         | int(11)      | NO   |     | 0       |       |
+| id                    | bigint(20)   | NO   |     | NULL    |       |
+| location              | varchar(255) | YES  |     | NULL    |       |
+| name                  | varchar(255) | NO   |     | NULL    |       |
+| screen_name           | varchar(255) | NO   |     | NULL    |       |
+| statuses_count        | int(11)      | NO   |     | 0       |       |
++-----------------------+--------------+------+-----+---------+-------+
+11 rows in set (0.00 sec)
+
+```
+```
+/* This is the Tweets Table */
+mysql> SHOW COLUMNS FROM `twizzik`.`Tweets`;
++-------------------------+--------------+------+-----+---------+-------+
+| Field                   | Type         | Null | Key | Default | Extra |
++-------------------------+--------------+------+-----+---------+-------+
+| created_at              | varchar(255) | NO   |     | NULL    |       |
+| favorited               | tinyint(1)   | YES  |     | NULL    |       |
+| id                      | bigint(20)   | NO   |     | NULL    |       |
+| in_reply_to_screen_name | varchar(255) | YES  |     | NULL    |       |
+| retweet_count           | int(11)      | NO   |     | NULL    |       |
+| retweeted               | tinyint(1)   | NO   |     | NULL    |       |
++-------------------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+```
+```
+/* This is the White List Users Table */
+mysql> SHOW COLUMNS FROM `twizzik`.`White_List`;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| id             | bigint(20)   | NO   |     | NULL    |       |
+| screen_name    | varchar(255) | NO   |     | NULL    |       |
+| dt_whitelisted | date         | NO   |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+```
+```
+/* This is the Black List Users Table */
+mysql> SHOW COLUMNS FROM `twizzik`.`Black_List`;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| id             | bigint(20)   | NO   |     | NULL    |       |
+| screen_name    | varchar(255) | NO   |     | NULL    |       |
+| dt_blacklisted | date         | NO   |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+```
+```
+/* This is the User Tracking Table */
+mysql> SHOW COLUMNS FROM `twizzik`.`User_Tracking`;
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| created_at       | date         | NO   |     | NULL    |       |
+| favourites_count | int(11)      | NO   |     | NULL    |       |
+| followers_count  | int(11)      | NO   |     | NULL    |       |
+| friends_count    | int(11)      | NO   |     | NULL    |       |
+| id               | bigint(20)   | NO   |     | NULL    |       |
+| screen_name      | varchar(255) | NO   |     | NULL    |       |
+| dt_updated       | date         | NO   |     | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+```
+
+
