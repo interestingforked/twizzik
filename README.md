@@ -15,16 +15,16 @@ _Current supported functions include:_
 
 `mass_unfollow()` - checks the authenticated user's followers and following and automatically unfollows non-reciprocal users  
 
+`add_whitelist_user()` - This will add a user to a whitelist of users - useful for `mass_unfollow()`  
+
+`all_whitelist_user()` - This will fetch all of the users from the `twizzik.White_List` table  
+
 **twizzik_db.py**  
  ===========  
 
 _Upcoming functions include:_  
 
-`add_whitelist_user()` - This will add a user to a whitelist of users that will not be unfollowed with the `mass_unfollow()` function  
-
 `del_whitelist_user()` - This will remove a user from the whitelist of the Authenticated user
-
-`get_whitelist()` - This will fetch all of the users from the `twizzik.White_List` table  
 
 `add_blacklist_user()` - This will add a user to a blacklist of members who won't show up in any search results
 
