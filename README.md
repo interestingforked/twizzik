@@ -41,7 +41,7 @@ _Upcoming functions include:_
 ##Databases
 ```
 /* This is the Users Table */
-mysql> SHOW COLUMNS FROM `twizzik`.`Users`;
+mysql> DESC `User`;
 +-----------------------+--------------+------+-----+---------+-------+
 | Field                 | Type         | Null | Key | Default | Extra |
 +-----------------------+--------------+------+-----+---------+-------+
@@ -77,15 +77,16 @@ mysql> SHOW COLUMNS FROM `twizzik`.`Tweets`;
 ```
 ```
 /* This is the White List Users Table */
-mysql> SHOW COLUMNS FROM `twizzik`.`White_List`;
+mysql> DESC `White_List`;
 +----------------+--------------+------+-----+---------+-------+
 | Field          | Type         | Null | Key | Default | Extra |
 +----------------+--------------+------+-----+---------+-------+
 | id             | bigint(20)   | NO   |     | NULL    |       |
 | screen_name    | varchar(255) | NO   |     | NULL    |       |
 | dt_whitelisted | date         | NO   |     | NULL    |       |
+| whitelisted_by | varchar(255) | YES  |     | NULL    |       |
 +----------------+--------------+------+-----+---------+-------+
-3 rows in set (0.00 sec)
+4 rows in set (0.00 sec)
 ```
 ```
 /* This is the Black List Users Table */
