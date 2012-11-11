@@ -127,4 +127,49 @@ mysql> DESC `User_Tracking_Ids`;
 +-------------+--------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
 ```
+**Queries to Create the Tables**
+ ============================
+```
+CREATE TABLE `User` ( `created_at` varchar(255) NOT NULL,
+`default_profile_image` tinyint(1) NOT NULL DEFAULT 0,
+`description` varchar(255) NULL,
+`favourites_count` int NOT NULL DEFAULT 0,
+`followers_count` int NOT NULL DEFAULT 0,
+`friends_count` int NOT NULL DEFAULT 0,
+`id` bigint NOT NULL,
+`location` varchar(255) NULL,
+`name` varchar(255) NOT NULL,
+`screen_name` varchar(255) NOT NULL,
+`statuses_count` int NOT NULL DEFAULT 0
+);
+CREATE TABLE `Tweets` ( `created_at` varchar(255) NOT NULL,
+`favorited` tinyint(1) NOT NULL DEFAULT 0,
+`id` bigint NOT NULL,
+`in_reply_to_screen_name` varchar(255) NULL,
+`retweet_count` int NOT NULL,
+`retweeted` tinyint(1) NOT NULL
+);
+CREATE TABLE `White_List` ( `id` bigint NOT NULL,
+`screen_name` varchar(255) NOT NULL,
+`dt_whitelisted` date NOT NULL,
+`whitelisted_by` varchar(255) NULL
+);
+CREATE TABLE `Black_List` ( `id` bigint NOT NULL,
+`screen_name` varchar(255) NOT NULL,
+`dt_blacklisted` date NOT NULL,
+`blacklisted_by` varchar(255) NULL
+);
+CREATE TABLE `User_Tracking` ( `created_at` varchar(255) NOT NULL,
+`favourites_count` int NOT NULL DEFAULT 0,
+`followers_count` int NOT NULL DEFAULT 0,
+`friends_count` int NOT NULL DEFAULT 0,
+`id` bigint NOT NULL,
+`screen_name` varchar(255) NOT NULL,
+`statuses_count` int NOT NULL DEFAULT 0
+);
+CREATE TABLE `User_Tracking_Ids` ( `id` bigint NOT NULL,
+`screen_name` varchar(255) NOT NULL,
+`dt_added` date NULL
+);
+```
 
