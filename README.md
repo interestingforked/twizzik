@@ -127,7 +127,7 @@ mysql> DESC `User_Tracking_Ids`;
 +-------------+--------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
 ```
-**Queries to Create the Tables**
+**Queries to Create the Tables**  
  ============================
 ```
 CREATE TABLE `User` ( `created_at` varchar(255) NOT NULL,
