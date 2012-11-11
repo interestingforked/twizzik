@@ -116,5 +116,16 @@ mysql> SHOW COLUMNS FROM `twizzik`.`User_Tracking`;
 +------------------+--------------+------+-----+---------+-------+
 7 rows in set (0.00 sec)
 ```
-
+```
+mysql> DESC `User_Tracking_Ids`
+    -> ;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| id          | bigint(20)   | NO   |     | NULL    |       |
+| screen_name | varchar(255) | NO   |     | NULL    |       |
+| dt_added    | date         | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+```
 
