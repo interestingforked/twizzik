@@ -117,8 +117,7 @@ mysql> SHOW COLUMNS FROM `twizzik`.`User_Tracking`;
 7 rows in set (0.00 sec)
 ```
 ```
-mysql> DESC `User_Tracking_Ids`
-    -> ;
+mysql> DESC `User_Tracking_Ids`;
 +-------------+--------------+------+-----+---------+-------+
 | Field       | Type         | Null | Key | Default | Extra |
 +-------------+--------------+------+-----+---------+-------+
