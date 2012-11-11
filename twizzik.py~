@@ -2,11 +2,15 @@ import tweepy
 import webbrowser
 import twizzik_db
 
+
+print twizzik_db.all_users()
+
 # Make constants to hold values of our keys
 CONSUMER_KEY = "wleBMXN8U0vYy0iyJqUccA"
 CONSUMER_SECRET = "SDa0M6xromPe5nmHxo17AX1r9zEm7bDXBn52JG4EB9A"
 ACCESS_TOKEN = "89395035-49W6pg7iFpQYbUrsoarGDKWrwgjyKKeqiDNMq0Bd6"
 ACCESS_SECRET = "6C5qOk95i09IiXiQpQH73qMkreTQmL3c3T4oMfk8"
+
 
 # set auth variables
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
@@ -124,7 +128,6 @@ def mass_unfollow():
         print "Now returning to the Main Menu."
     else:
         print "Returning to the Main Menu...\n"
-
 # whitelist functions
 def whitelist():
     whitelist_selection = raw_input("(1)Add User | (2)Delete User | (3)Display Whitelist | (4)Back to Main\n>>> ")
@@ -133,31 +136,13 @@ def whitelist():
 	while add_more == True:
             print "Add User"
             print "--------\n"
+	    user_id = raw_input("User ID of the Member to ADD?\n>>> ")
 	    screen_name = raw_input("Screen Name of the Member to ADD?\n>>> ")
-	    user = api.get_user(screen_name)
-            if user == False:
-	        print "User not found...\n"
-		search_again = raw_input("Do you want to search again? (Y/N)\n>>>")
-		if search_again.lower() != "y":
-                    add_more = False            
-            else:
-		screen_name = user.screen_name
-		user_id = user.id
-		my_name = api.me().screen_name
-		print "\nFound User " + screen_name + "\nUser ID = " + str(user_id) + "\n"
-		add_to_whitelist = raw_input("Do you want to add this user to the White List for " + my_name + "? (Y/N)\n>>>")
-		if add_to_whitelist.lower() != "y":
-		    add_more = False
-		else:
-	            twizzik_db.add_whitelist_user(user_id,screen_name,my_name)
-                check = raw_input("Add Another User? (Y/N)\n>>>")
-	        if check != "y":
-                    add_more = False
-		    print "Returning to Main Menu\n\n"
-    elif whitelist_selection == "3":
-        print "Display Whitelist"
-        print "-----------------\n"
-	twizzik_db.all_whitelist_user()
+	    twizzik_db.add_whitelist_user(user_id,screen_name)
+            check = raw_input("Add Another User? (Y/N)\n>>>")
+	    if check != "y":
+                add_more = False
+		print "Returning to Main Menu\n\n"
     else:
 	print "Function Coming Soon!"	              
 
